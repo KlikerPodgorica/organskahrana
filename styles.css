@@ -11,14 +11,20 @@ body {
 }
 .main-menu {
   list-style-type: none;
-  float: right;
+}
+.menu-button {
+  display: none;
+}
+.main-menu-mobile {
+  display: none;
 }
 .menu-item {
   display: inline-block;
+  padding: 15px;
 }
 .menu-item a {
   text-decoration: none;
-  padding: 15px;
+
   text-align: center;
 }
 .menu-item a:hover {
@@ -26,7 +32,6 @@ body {
   border-bottom: 1px solid tomato;
 }
 .logo {
-  float: left;
   padding-left: 20px;
   padding-top: 10px;
 }
@@ -42,6 +47,13 @@ body {
 .navigation {
   text-align: center;
   padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation-logo-and-button {
+  display: flex;
+  justify-content: space-between;
 }
 .hero {
   background-image: url(vegetables.jpg);
@@ -59,7 +71,8 @@ body {
 }
 .article {
   width: 70%;
-  margin-left: 15%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 90px;
 }
 .title {
@@ -67,7 +80,8 @@ body {
 }
 .blog {
   width: 70%;
-  margin-left: 15%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 90px;
 }
 .cards {
@@ -93,4 +107,70 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .navigation-logo-and-button {
+    width: 100%;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-button {
+    background-color: rgb(235, 232, 185);
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-menu {
+    display: none;
+  }
+
+  .menu-item {
+    padding-left: 0;
+  }
+  .main-menu-mobile.active {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .logo h1 {
+    font-size: 1em;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .article {
+    width: 100%;
+  }
+
+  .blog {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+
 }

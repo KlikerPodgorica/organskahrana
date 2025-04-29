@@ -8,12 +8,22 @@
   </head>
   <body>
     <div class="container">
-      <div class="navigation clearfix">
-        <div class="logo">
-          <h1>ORGANSKA HRANA</h1>
+      <div class="navigation">
+        <div class="navigation-logo-and-button">
+          <div class="logo">
+            <h1>ORGANSKA HRANA</h1>
+          </div>
+          <button class="menu-button" id="menu-button">
+            <img src="./hamburger.svg" alt="" style="height: 20px; width: auto;">
+          </button>
         </div>
         <div class="menu">
           <ul class="main-menu">
+            <li class="menu-item"><a href="index.html">Početna</a></li>
+            <li class="menu-item"><a href="o-nama.html">O nama</a></li>
+            <li class="menu-item"><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+          <ul class="main-menu-mobile" id="main-menu-mobile">
             <li class="menu-item"><a href="index.html">Početna</a></li>
             <li class="menu-item"><a href="o-nama.html">O nama</a></li>
             <li class="menu-item"><a href="kontakt.html">Kontakt</a></li>
@@ -69,3 +79,15 @@
     </div>
   </body>
 </html>
+
+
+<script>
+
+  const menuButton = document.getElementById("menu-button");
+  const mainMenuMobile = document.getElementById("main-menu-mobile");
+
+  menuButton.addEventListener("click", () => {
+    mainMenuMobile.classList.toggle("active");
+  });
+
+</script>
